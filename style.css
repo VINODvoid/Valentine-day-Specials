@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  cursor: url('./icons8-heart-48.png'), auto;
+}
+
+body {
+  background: linear-gradient(135deg, #ffd6e6, #ffe6f2, #e6f2ff);
+font-family: "Protest Riot", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-img {
+  width: 30rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(199, 23, 53, 0.8);
+  transition: all 2s ease;
+  transform: translateZ(0);
+  transition: transform 0.5s;
+}
+
+.title {
+  font-size: 3.6rem;
+  color: #f53699;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: url('./icons8-heart-48.png'), auto;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn--yes {
+  background-color: #40c057;
+}
+
+.btn--no {
+  background-color: #f03e3e;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+.heart {
+  width: 180px;
+  height: 20px;
+  background-image: url('./icons8-heart-48.png');
+  background-size: contain;
+  animation: heartBeat 1s infinite alternate;
+  margin-bottom: 20px;
+}
+
+@keyframes heartBeat {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.title {
+  font-family:'Segoe UI', Tahoma, ;
+}
+
+.header {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  font-family:Arial, Helvetica;
+}
+
+.header-title {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  
+}
+
+
+
+.header-author {
+  font-size: 2rem;
+  animation: slideIn 1s ease-out, splash 0.5s ease-out 1s forwards, highlight 1.5s ease-out 2s forwards;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes splash {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px) rotate(20deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes highlight {
+  from {
+    color: inherit;
+    background-color: inherit;
+  }
+  to {
+    color: #ff1493; /* Hot pink */
+    background-color: #ffff00; /* Yellow */
+  }
+}
